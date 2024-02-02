@@ -1,4 +1,4 @@
-if Code.ensure_loaded?(Phoenix.HTML) && Code.ensure_loaded?(Phoenix.HTML.Form) do
+if Code.ensure_loaded?(Phoenix.HTML) && Code.ensure_loaded?(Phoenix.HTML.Form) && Code.ensure_loaded?(PhoenixHTMLHelpers.Form)  do
   defmodule PolymorphicEmbed.HTML.Form do
     import Phoenix.HTML, only: [html_escape: 1]
     import PhoenixHTMLHelpers.Form, only: [hidden_inputs_for: 1]
