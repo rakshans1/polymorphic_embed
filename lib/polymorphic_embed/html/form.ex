@@ -1,8 +1,8 @@
 if Code.ensure_loaded?(Phoenix.HTML) && Code.ensure_loaded?(Phoenix.HTML.Form) && Code.ensure_loaded?(PhoenixHTMLHelpers) do
   defmodule PolymorphicEmbed.HTML.Form do
-    import Phoenix.HTML
-    import Phoenix.HTML.Form
-    use PhoenixHTMLHelpers
+    import Phoenix.HTML, only: [html_escape: 1]
+    import PhoenixHTMLHelpers.Form, only: [hidden_inputs_for: 1]
+    import Phoenix.HTML.Form, only: [input_value: 2]
 
     @doc """
     Returns the polymorphic type of the given field in the given form data.
